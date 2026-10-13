@@ -1,0 +1,22 @@
+{
+  "id": "review-working-tree",
+  "loaded_skills": [
+    "code-review/SKILL.md",
+    "code-review/references/review-heuristics.md"
+  ],
+  "actions": [
+    {
+      "command": "git status --short; git diff; git diff --cached; cat README.md pricing.py test_pricing.py",
+      "output": "Reviewed staged README, unstaged pricing.py, untracked test_pricing.py in context."
+    },
+    {
+      "command": "python3 -m unittest -v",
+      "output": "FAIL test_three: 13 != 30"
+    }
+  ],
+  "final_response": "Correctness: [P1] pricing.py:2 adds price and count instead of multiplying. For total(10, 3), returns 13 rather than 30; zero count also returns price. Restore multiplication. Requirements: README total contract and untracked regression test confirm this defect; no separate additional requirement gaps found. Reviewed staged, unstaged and relevant untracked changes. One test run, one failure. No fixes made.",
+  "artifact_paths": [],
+  "limitations": [
+    "No separate formal specification; coverage assessed from README and test."
+  ]
+}

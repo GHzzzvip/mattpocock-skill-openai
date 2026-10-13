@@ -1,0 +1,3 @@
+interface:
+  display_name: "Wizard"
+  short_description: "Create an interactive shell guide for setup steps requiring..."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Ask Matt"
+  short_description: "Choose a skill or engineering workflow from this collection..."
+policy:
+  allow_implicit_invocation: false

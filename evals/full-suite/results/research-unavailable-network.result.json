@@ -1,0 +1,36 @@
+{
+  "id": "research-unavailable-network",
+  "loaded_skills": [
+    "research"
+  ],
+  "discovery_decision": "Catalog metadata: research permits implicit invocation and directly matches a technical compatibility investigation with primary-source citations. Select research only; respect simulated local-only capability restriction.",
+  "actions": [
+    {
+      "command": "cat /var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/research-unavailable-network.request.json",
+      "output": "Read per-case prompt, context, workspace and restrictions."
+    },
+    {
+      "command": "cat /var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/skill-library/research/SKILL.md",
+      "output": "---\nname: research\ndescription: Investigate a defined technical question using primary sources and produce a concise, cited findings artifact.\nlicense: MIT\n---\n\n# Research a question\n\nDefine the question and the decision it informs. Prefer official documentation, specifications, source code, and first-party data. Read the relevant source rather than relying on search snippets; distinguish measured facts, source claims, and inference.\n\nUse a background researcher only when delegation is available and authorized and independent work can continue. Otherwise research directly. Do not require a particular browser, MCP server, or subagent tool.\n\nWrite a concise findings file in the requested or established notes location, or `.scratch/research/` when appropriate. Include the question, findings with nearby citations, conflicting evidence, open questions, and practical implications. State the date when time-sensitive facts were checked. Link existing artifacts rather than reproducing them.\n\nStop when evidence answers the decision sufficiently or further progress requires unavailable access. Report that boundary and the artifact path. Research alone does not authorize implementation or publishing findings externally.\n",
+      "exit_code": 0
+    },
+    {
+      "command": "rg --files; git status --short; cat vendor-release-notes.md",
+      "output": "vendor-release-notes.md\n# AcmeWidget official release notes (fixture primary source)\nPublished 2025-02-01. AcmeWidget 2 supports Runtime 18 and 20. AcmeWidget 3 supports Runtime 20 and 22. This snapshot contains no later release information.\n",
+      "exit_code": 0
+    },
+    {
+      "command": "mkdir -p .scratch/research\ncat > .scratch/research/acmewidget-compatibility.txt <<'EOF'\nAcmeWidget compatibility findings\nLocal evidence inspected: 2026-10-12\nSource publication date: 2025-02-01\n\nQuestion and decision\nWhich runtimes are supported by the current AcmeWidget release, so a release/runtime combination can be selected?\n\nVerified source claims (historical snapshot, NOT a verified current matrix)\nAcmeWidget 2: Runtime 18 and Runtime 20.\nSource: vendor-release-notes.md, line 2 (local first-party release notes).\nAcmeWidget 3: Runtime 20 and Runtime 22.\nSource: vendor-release-notes.md, line 2 (local first-party release notes).\n\nRuntime overlap (inference)\nRuntime 20 appears in both documented support lists. It is a candidate for an upgrade between these two documented versions, subject to the other requirements of the application. This is inferred from vendor-release-notes.md, line 2; no runtime compatibility was tested.\n\nFreshness and conflicting evidence\nThe source explicitly contains no later release information (vendor-release-notes.md, line 2). There is no conflicting local evidence. The snapshot is over 20 months older than the inspection date, so it cannot establish the current release, whether these versions remain supported, or whether newer runtimes are supported. Absence of a runtime in this snapshot is not proof of incompatibility.\n\nOpen questions / practical boundary\nThe current release and current compatibility matrix as of 2026-10-12 remain unverified. A dated current first-party release note or support matrix must be supplied locally to finish that part of the request. The scenario permits only local files; no network or browsing was attempted. Do not use this historical matrix alone as a current deployment recommendation.\nEOF\npython3 - <<'PY'\nfrom pathlib import Path\ns=Path('vendor-release-notes.md').read_text()\np=Path('.scratch/research/acmewidget-compatibility.txt')\nr=p.read_text()\nassert 'AcmeWidget 2 supports Runtime 18 and 20' in s\nassert 'AcmeWidget 3 supports Runtime 20 and 22' in s\nassert 'current compatibility matrix as of 2026-10-12 remain unverified' in r\nprint('Verified both compatibility rows against local source; current-status limitation present.')\nPY\ngit diff --check\ngit status --short",
+      "output": "Verified both compatibility rows against local source; current-status limitation present.\n?? .scratch/\n",
+      "exit_code": 0
+    }
+  ],
+  "artifacts": [
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/research-unavailable-network/.scratch/research/acmewidget-compatibility.txt"
+  ],
+  "limitations": [
+    "No browsing or network requests permitted by this scenario.",
+    "Only historical 2025-02-01 primary-source snapshot provided; current release/support cannot be established."
+  ],
+  "final_response": "Saved findings in .scratch/research/acmewidget-compatibility.txt. The local first-party release notes (2025-02-01, line 2) list AcmeWidget 2 with Runtime 18/20 and AcmeWidget 3 with Runtime 20/22. The current matrix as of 2026-10-12 remains unverified; a newer first-party snapshot is needed. No network requests were made."
+}

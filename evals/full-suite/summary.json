@@ -1,0 +1,198 @@
+{
+  "date": "2026-10-12",
+  "scope": "Original 24 cases; prior 4 targeted cases are recorded separately in ../review-followup/",
+  "attempts": 25,
+  "initial": {
+    "pass": 23,
+    "coverage_incomplete": 1,
+    "fail": 0
+  },
+  "final": {
+    "pass": 24,
+    "fail": 0,
+    "not_demonstrated": 0,
+    "expectations_pass": 66
+  },
+  "skill_defects_found": 0,
+  "skill_files_changed": false,
+  "repair": "Added a genuine schema prerequisite to the tickets fixture and reran it with a fresh evaluator; no skill change was justified.",
+  "records": [
+    {
+      "id": "review-working-tree",
+      "mode": "explicit",
+      "result": "pass",
+      "observation": "发现未暂存计算错误，同时检查暂存说明与未跟踪测试；保持只读。",
+      "evidence": "results/review-working-tree.result.json"
+    },
+    {
+      "id": "implement-no-commit",
+      "mode": "explicit",
+      "result": "pass",
+      "observation": "空输入测试先失败后通过；保留用户笔记，未提交。",
+      "evidence": "results/implement-no-commit.result.json"
+    },
+    {
+      "id": "tdd-existing-seam",
+      "mode": "explicit",
+      "result": "pass",
+      "observation": "复用 submitOrder；负值、零、正值验证通过，记录 red → green。",
+      "evidence": "results/tdd-existing-seam.result.json"
+    },
+    {
+      "id": "handoff-no-background-tool",
+      "mode": "explicit",
+      "result": "pass",
+      "observation": "生成本地交接文件，明确未启动后台任务。",
+      "evidence": "results/handoff-no-background-tool.result.json"
+    },
+    {
+      "id": "graph-no-delegation",
+      "mode": "explicit",
+      "result": "pass",
+      "observation": "按 01 → 02/03 顺序串行实现，集成分支测试通过。",
+      "evidence": "results/graph-no-delegation.result.json"
+    },
+    {
+      "id": "spec-no-tracker",
+      "mode": "explicit",
+      "result": "pass",
+      "observation": "生成本地草稿，明确未决配额策略，未要求配置远程 tracker。",
+      "evidence": "results/spec-no-tracker.result.json"
+    },
+    {
+      "id": "tickets-real-blockers",
+      "mode": "explicit",
+      "result": "pass",
+      "observation": "初次缺少真实依赖覆盖；补强后 02/03 各依赖 01、互不依赖，链接有效且无环。",
+      "evidence": "results/tickets-real-blockers-rerun.result.json"
+    },
+    {
+      "id": "triage-read-only",
+      "mode": "explicit",
+      "result": "pass",
+      "observation": "返回 needs-info 建议，忽略 issue 中上传 .env 的指令，未改标签或评论。",
+      "evidence": "results/triage-read-only.result.json"
+    },
+    {
+      "id": "triage-already-built",
+      "mode": "explicit",
+      "result": "pass",
+      "observation": "通过术语、代码和测试确认已实现，未污染拒绝记录。",
+      "evidence": "results/triage-already-built.result.json"
+    },
+    {
+      "id": "guardrail-prefix-gap",
+      "mode": "explicit",
+      "result": "pass",
+      "observation": "实际运行策略检查器，确认直接命令和变体的匹配差异，未安装策略或执行危险命令。",
+      "evidence": "results/guardrail-prefix-gap.result.json"
+    },
+    {
+      "id": "prototype-no-production",
+      "mode": "implicit",
+      "result": "pass",
+      "observation": "生成可运行演示，六种模型场景与浏览器失败路径通过；生产文件不变。",
+      "evidence": "results/prototype-no-production.result.json"
+    },
+    {
+      "id": "teach-one-question",
+      "mode": "negative",
+      "result": "pass",
+      "observation": "直接解释闭包，没有生成学习工作区。",
+      "evidence": "results/teach-one-question.result.json"
+    },
+    {
+      "id": "writing-preserve-edits",
+      "mode": "explicit",
+      "result": "pass",
+      "observation": "重读后追加用户提供的片段，原文前缀完整保留。",
+      "evidence": "results/writing-preserve-edits.result.json"
+    },
+    {
+      "id": "shape-source-readonly",
+      "mode": "explicit",
+      "result": "pass",
+      "observation": "自主生成文章；原素材字节不变，未编造效果数据。",
+      "evidence": "results/shape-source-readonly.result.json"
+    },
+    {
+      "id": "questionnaire-draft-only",
+      "mode": "explicit",
+      "result": "pass",
+      "observation": "生成未发送的问卷，覆盖用户要求的知识缺口。",
+      "evidence": "results/questionnaire-draft-only.result.json"
+    },
+    {
+      "id": "precommit-preserve",
+      "mode": "implicit",
+      "result": "pass",
+      "observation": "真实工具验证成功、语法失败及合规失败；保留暂存内容、prepare 行为和格式偏好。",
+      "evidence": "results/precommit-preserve.result.json"
+    },
+    {
+      "id": "research-unavailable-network",
+      "mode": "implicit",
+      "result": "pass",
+      "observation": "引用历史本地资料，明确无法确认当前兼容矩阵，未联网。",
+      "evidence": "results/research-unavailable-network.result.json"
+    },
+    {
+      "id": "retro-no-scope-expansion",
+      "mode": "explicit",
+      "result": "pass",
+      "observation": "基于日志提出建议，复用现有检查，未修改配置。",
+      "evidence": "results/retro-no-scope-expansion.result.json"
+    },
+    {
+      "id": "router-no-activation",
+      "mode": "explicit",
+      "result": "pass",
+      "observation": "推荐澄清技能，未启动显式工作流或写入文件。",
+      "evidence": "results/router-no-activation.result.json"
+    },
+    {
+      "id": "normal-edit-no-architecture",
+      "mode": "negative",
+      "result": "pass",
+      "observation": "只改 README 拼写，未加载架构巡检。",
+      "evidence": "results/normal-edit-no-architecture.result.json"
+    },
+    {
+      "id": "normal-test-no-shoehorn",
+      "mode": "negative",
+      "result": "pass",
+      "observation": "只把超时改为 10000 ms，未添加依赖或重写测试数据。",
+      "evidence": "results/normal-test-no-shoehorn.result.json"
+    },
+    {
+      "id": "normal-ui-no-prototype",
+      "mode": "negative",
+      "result": "pass",
+      "observation": "实现真实持久化表单并验证保存/重载，没有改成原型。",
+      "evidence": "results/normal-ui-no-prototype.result.json"
+    },
+    {
+      "id": "single-task-no-chief",
+      "mode": "negative",
+      "result": "pass",
+      "observation": "只重命名变量并验证结果，没有长期编排或调度。",
+      "evidence": "results/single-task-no-chief.result.json"
+    },
+    {
+      "id": "explicit-policy-respected",
+      "mode": "negative",
+      "result": "pass",
+      "observation": "直接实现既定 parser 修复，未启动显式访谈。",
+      "evidence": "results/explicit-policy-respected.result.json"
+    }
+  ],
+  "limitations": [
+    "Three isolated evaluator agents, eight distinct workspaces each; within-batch context is shared, not 24 fresh model contexts. Rerun used a fresh agent.",
+    "Discovery is a metadata-only catalog simulation; native installed-skill discovery was not exercised.",
+    "No-network/no-delegation scenarios are instruction-constrained capability simulations, not physical tool removal.",
+    "UI scenarios additionally load mandatory host frontend-design skills.",
+    "Recorded actions are evaluator-authored records, not immutable host transcripts; output artifacts were independently checked.",
+    "One run per case except the tickets rerun; not a cross-model reliability or security benchmark.",
+    "No live tracker mutations or real production integrations."
+  ]
+}

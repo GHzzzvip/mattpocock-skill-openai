@@ -1,0 +1,23 @@
+{
+  "id": "shape-source-readonly",
+  "loaded_skills": [
+    "writing-shape/SKILL.md"
+  ],
+  "actions": [
+    {
+      "command": "Read skill and raw.md in full",
+      "output": "Audience and thesis supplied; long-term measured effect explicitly missing."
+    },
+    {
+      "command": "Write article.md; compare raw.md bytes to pre-write contents; count article words",
+      "output": "Source unchanged. Article contains 261 whitespace-delimited words."
+    }
+  ],
+  "final_response": "Created article.md for practicing developers, about 250 words. raw.md is unchanged. The draft explicitly leaves long-term productivity effects unmeasured.",
+  "artifacts": [
+    "article.md"
+  ],
+  "limitations": [
+    "No measured long-term effect was supplied."
+  ]
+}

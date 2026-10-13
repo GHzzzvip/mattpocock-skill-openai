@@ -1,0 +1,44 @@
+{
+  "id": "precommit-preserve",
+  "loaded_skills": [
+    "setup-pre-commit/SKILL.md"
+  ],
+  "selection": "Catalog metadata allows implicit invocation; existing-hook task directly matches setup-pre-commit.",
+  "actions": [
+    {
+      "command": "npm install",
+      "exit_code": 0,
+      "output": "Installed declared Husky 9.1.7, lint-staged 15.5.2, Prettier 3.5.3. Existing prepare ran. npm reported 3 high-severity dependency advisories."
+    },
+    {
+      "command": "npm run prepare; sh -n .husky/pre-commit; npm exec -- lint-staged --version; npm exec -- prettier --version",
+      "exit_code": 0,
+      "output": "Preserved prepare plus Husky configured. Versions 15.5.2 and 3.5.3."
+    },
+    {
+      "command": "cat node_modules/husky/bin.mjs",
+      "exit_code": 1,
+      "output": "Wrong filename; corrected by inspecting installed node_modules/husky/bin.js."
+    },
+    {
+      "command": "python3 disposable .hook-smoke test harness",
+      "exit_code": 0,
+      "output": "Real installed tool pass (exit 0), invalid JS fails (exit 1), compliance marker fails (exit 1). Full exact outputs in hook-verification.json. Nested disposable repository removed after test; no commits."
+    },
+    {
+      "command": "git diff --cached; git diff --check; git diff -- package.json .husky/pre-commit; npm test; git config --local --get core.hooksPath; test -x .husky/pre-commit; cat .prepare-ran",
+      "exit_code": 0,
+      "output": "Staged user-work.txt still exactly USER STAGED WORK: preserve exactly. Hook executable, hooksPath .husky/_, original prepare marker yes. npm test successful but discovers zero tests."
+    }
+  ],
+  "final_response": "Extended the executable hook with lint-staged and preserved compliance, prepare behavior, and Prettier preferences. Real-tool checks passed formatting and rejected malformed JS and compliance failure in a disposable repository; staged user-work.txt is unchanged. Added lockfile. No typecheck script exists; npm test finds no tests. npm install reported 3 high dependency advisories.",
+  "artifact_paths": [
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/precommit-preserve/package.json",
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/precommit-preserve/package-lock.json",
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/precommit-preserve/.husky/pre-commit",
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/precommit-preserve/hook-verification.json"
+  ],
+  "limitations": [
+    "No typecheck script or existing tests. Dependency advisories reported; dependency versions left as declared."
+  ]
+}

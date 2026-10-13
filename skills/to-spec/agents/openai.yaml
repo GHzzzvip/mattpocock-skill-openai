@@ -1,0 +1,5 @@
+interface:
+  display_name: "To Spec"
+  short_description: "Synthesize an existing discussion or plan into a buildable..."
+policy:
+  allow_implicit_invocation: false

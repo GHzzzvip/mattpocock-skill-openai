@@ -1,0 +1,5 @@
+interface:
+  display_name: "To Questionnaire"
+  short_description: "Draft a questionnaire for another person whose knowledge is..."
+policy:
+  allow_implicit_invocation: false

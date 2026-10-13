@@ -1,0 +1,92 @@
+{
+  "skill": "/Users/ghz/workspace/ai-practice/skill-openai/skills/triage/SKILL.md",
+  "reference": "/Users/ghz/workspace/ai-practice/skill-openai/skills/triage/references/state-machine.md",
+  "fixture": "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skill-review-eval-x3p105pa/triage.json",
+  "independence": "Both requests evaluated against the same unchanged fixture; request 1 made no transitions and request 2 did not assume any prior transition.",
+  "requests": [
+    {
+      "request": "Show me what needs my attention. Do not change anything.",
+      "actual_response": "3 issues need attention:\n\n- Untriaged (1): #1 [No state](/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skill-review-eval-x3p105pa/triage.json) — has only the unrelated `docs` label, with no triage state.\n- Needs triage (1): #2 [Needs evaluation](/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skill-review-eval-x3p105pa/triage.json) — labeled `needs-triage` and waiting for evaluation.\n- Reporter replied (1): #3 [New reporter details](/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skill-review-eval-x3p105pa/triage.json) — Alice supplied partial reproduction details on October 11, after the October 10 information request; ready for re-evaluation.\n\n#4 has only bot activity after the information request. #5’s reporter reply predates the latest request. #6 is an external PR, and external PR discovery is disabled. Title links point to the local fixture because tracker URLs were not supplied.\n\nNo labels, comments, assignments, or issue states were changed.",
+      "evidence_used": [
+        {
+          "item": 1,
+          "evidence": "labels=[docs]; no mapped state",
+          "bucket": "untriaged"
+        },
+        {
+          "item": 2,
+          "evidence": "labels=[bug, needs-triage]",
+          "bucket": "needs-triage"
+        },
+        {
+          "item": 3,
+          "evidence": "reporter alice replied 2026-10-11 after maintainer information request 2026-10-10; partial answer still merits re-evaluation",
+          "bucket": "needs-info with new reporter reply"
+        },
+        {
+          "item": 4,
+          "evidence": "Only bot, not reporter bob, replied after request",
+          "excluded": true
+        },
+        {
+          "item": 5,
+          "evidence": "Reporter carol reply 2026-10-09 precedes latest request 2026-10-10",
+          "excluded": true
+        },
+        {
+          "item": 6,
+          "evidence": "external PR; external_pr_discovery=false",
+          "excluded": true
+        }
+      ],
+      "counts": {
+        "untriaged": 1,
+        "needs-triage": 1,
+        "needs-info with new reporter reply": 1,
+        "total": 3
+      },
+      "actions_taken": [
+        "Read fixture and skill; returned discovery result only."
+      ]
+    },
+    {
+      "request": "Re-evaluate issue 3 after the reporter replied. Recommend the next state only.",
+      "actual_response": "Recommend `needs-info` for issue #3, keeping the `bug` category.\n\nAlice’s October 11 reply supplies a step—“click Save twice”—but explicitly leaves the environment version unknown. That version was requested on October 10 and is still missing. The fixture also provides no expected or observed behavior. Re-evaluation therefore ends with insufficient information; implementation readiness is not established. The report was not reproduced because no repository or runtime is available.\n\nThe remaining need is the environment version and the expected versus actual result of clicking Save twice. Reuse the supplied step; do not request it again. No tracker changes or comments were made.",
+      "evidence_used": [
+        "Current labels: bug, needs-info.",
+        "Maintainer on 2026-10-10 requested reproduction steps and environment version.",
+        "Reporter alice on 2026-10-11: Repro: click Save twice. I have not checked the environment version.",
+        "Complete fixture contains no issue body, expected result, or actual result.",
+        "No repository or runtime available for reproduction.",
+        "State-machine reference: reporter reply triggers re-evaluation, which may return to needs-info when gaps remain."
+      ],
+      "recommended_category": "bug",
+      "recommended_next_state": "needs-info",
+      "verification_status": "insufficient information",
+      "actions_taken": [
+        "Read and re-evaluated existing discussion; recommended a state only."
+      ],
+      "tracker_mutations": []
+    }
+  ],
+  "file_preservation_verification": {
+    "method": "SHA-256 comparison before and after evaluation, covering tracker fixture and every file in triage skill directory.",
+    "before": {
+      "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skill-review-eval-x3p105pa/triage.json": "4312b7039d44d9e0f3454cef9695cb4b5357692bf57cff8b98f9d7f366b83931",
+      "/Users/ghz/workspace/ai-practice/skill-openai/skills/triage/LICENSE": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "/Users/ghz/workspace/ai-practice/skill-openai/skills/triage/SKILL.md": "5351d5ba17ce12537bb7b827b00d82845e05e286c33d6320db6720897f61018d",
+      "/Users/ghz/workspace/ai-practice/skill-openai/skills/triage/agents/openai.yaml": "61685084260b7c8a14042cdfd676aaa8f6f5f0ddbaa337130de38130bca7c8bd",
+      "/Users/ghz/workspace/ai-practice/skill-openai/skills/triage/references/state-machine.md": "2e1a48355d91bb7187efa4aebed25dccfa0768865f5802193819a6f4542ad0aa"
+    },
+    "after": {
+      "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skill-review-eval-x3p105pa/triage.json": "4312b7039d44d9e0f3454cef9695cb4b5357692bf57cff8b98f9d7f366b83931",
+      "/Users/ghz/workspace/ai-practice/skill-openai/skills/triage/LICENSE": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "/Users/ghz/workspace/ai-practice/skill-openai/skills/triage/SKILL.md": "5351d5ba17ce12537bb7b827b00d82845e05e286c33d6320db6720897f61018d",
+      "/Users/ghz/workspace/ai-practice/skill-openai/skills/triage/agents/openai.yaml": "61685084260b7c8a14042cdfd676aaa8f6f5f0ddbaa337130de38130bca7c8bd",
+      "/Users/ghz/workspace/ai-practice/skill-openai/skills/triage/references/state-machine.md": "2e1a48355d91bb7187efa4aebed25dccfa0768865f5802193819a6f4542ad0aa"
+    },
+    "all_unchanged": true
+  },
+  "external_services_contacted": false,
+  "subagents_spawned": false
+}

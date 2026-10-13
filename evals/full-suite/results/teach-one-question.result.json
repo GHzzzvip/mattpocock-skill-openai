@@ -1,0 +1,18 @@
+{
+  "id": "teach-one-question",
+  "loaded_skills": [],
+  "discovery_decision": "Catalog metadata inspected before any body. Brief closure explanation needs no skill; teach is explicit-only and was not invoked.",
+  "actions": [
+    {
+      "command": "cat /var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/teach-one-question.request.json",
+      "output": "Read request: brief English explanation, no files."
+    },
+    {
+      "command": "cat /var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/catalog.json",
+      "output": "Inspected skill metadata; no entrypoint selected."
+    }
+  ],
+  "final_response": "A closure is a function that remembers variables from the scope where it was created, even after that outer function has finished. For example, a counter function can keep a private count and increment it each time you call it.",
+  "artifacts": [],
+  "limitations": []
+}

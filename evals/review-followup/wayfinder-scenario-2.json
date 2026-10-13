@@ -1,0 +1,25 @@
+{
+  "destination": "Decide a cache policy",
+  "tasks": {
+    "A": {
+      "question": "Choose eviction policy",
+      "status": "active",
+      "owner": "other-run",
+      "blockers": []
+    },
+    "B": {
+      "question": "Choose default TTL; user has not given preference",
+      "status": "open",
+      "owner": null,
+      "blockers": []
+    },
+    "C": {
+      "question": "Choose monitoring signals",
+      "status": "open",
+      "owner": null,
+      "blockers": [
+        "A"
+      ]
+    }
+  }
+}

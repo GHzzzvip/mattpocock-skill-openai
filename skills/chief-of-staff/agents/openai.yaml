@@ -1,0 +1,5 @@
+interface:
+  display_name: "Chief Of Staff"
+  short_description: "Coordinate an explicitly requested long-running goal,..."
+policy:
+  allow_implicit_invocation: false

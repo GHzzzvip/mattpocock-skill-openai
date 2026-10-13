@@ -1,0 +1,34 @@
+{
+  "id": "tdd-existing-seam",
+  "loaded_skills": [
+    "tdd/SKILL.md",
+    "tdd/references/tests.md",
+    "tdd/references/mocking.md"
+  ],
+  "actions": [
+    {
+      "command": "cat orders.py test_orders.py",
+      "output": "Existing submitOrder seam and FakePayment reused."
+    },
+    {
+      "command": "Add test_negative_never_charges; python3 -m unittest",
+      "output": "RED: ValueError not raised. 1 failure / 2 tests."
+    },
+    {
+      "command": "Add amount < 0 guard before payment.charge; python3 -m unittest",
+      "output": "GREEN: 2 tests OK."
+    },
+    {
+      "command": "Add zero boundary regression; python3 -m unittest; git diff",
+      "output": "3 tests OK; reviewed minimal guard and public-boundary tests."
+    }
+  ],
+  "final_response": "Negative amounts now raise ValueError before charging. The agreed submitOrder boundary was reused. Observed red then green; all three negative, zero and positive tests pass. Payment behavior is verified with the existing fake adapter, not a live payment service.",
+  "artifact_paths": [
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/tdd-existing-seam/orders.py",
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/tdd-existing-seam/test_orders.py"
+  ],
+  "limitations": [
+    "Fake payment adapter; no live payment integration exercised."
+  ]
+}

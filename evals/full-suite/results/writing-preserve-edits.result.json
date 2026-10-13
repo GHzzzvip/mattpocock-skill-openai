@@ -1,0 +1,21 @@
+{
+  "id": "writing-preserve-edits",
+  "loaded_skills": [
+    "writing-fragments/SKILL.md"
+  ],
+  "actions": [
+    {
+      "command": "cat skill and ideas.md",
+      "output": "Existing user edit and earlier fragment read."
+    },
+    {
+      "command": "Re-read ideas.md, append supplied fragment after horizontal rule, assert new content starts with original",
+      "output": "Original content preserved; supplied experience appended in arrival order."
+    }
+  ],
+  "final_response": "Appended your experience to ideas.md and preserved your existing edit and fragment.",
+  "artifacts": [
+    "ideas.md"
+  ],
+  "limitations": []
+}

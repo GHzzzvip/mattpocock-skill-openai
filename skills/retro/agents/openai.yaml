@@ -1,0 +1,5 @@
+interface:
+  display_name: "Retro"
+  short_description: "Review a completed coding session and recommend..."
+policy:
+  allow_implicit_invocation: false

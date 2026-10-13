@@ -1,0 +1,21 @@
+{
+  "id": "questionnaire-draft-only",
+  "loaded_skills": [
+    "to-questionnaire/SKILL.md"
+  ],
+  "actions": [
+    {
+      "command": "Read request and skill; list workspace",
+      "output": "Recipient, decision, topic coverage, no deadline and draft-only destination supplied."
+    },
+    {
+      "command": "Write to-questionnaire-migration-downtime.md",
+      "output": "Saved grouped questions with answer spaces and invitation for missing considerations; no contact made."
+    }
+  ],
+  "final_response": "Saved the unsent draft to to-questionnaire-migration-downtime.md. It covers downtime approval, rollback, load, replication, compatibility, and rehearsals.",
+  "artifacts": [
+    "to-questionnaire-migration-downtime.md"
+  ],
+  "limitations": []
+}

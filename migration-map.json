@@ -1,0 +1,349 @@
+{
+  "source_repository": "https://github.com/mattpocock/skills",
+  "source_commit": "49dd158d1076134a641b33efb035946536778336",
+  "reviewed_on": "2026-10-12",
+  "skills": [
+    {
+      "source": "skills/engineering/ask-matt/SKILL.md",
+      "source_name": "ask-matt",
+      "name": "ask-matt",
+      "category": "engineering",
+      "path": "skills/ask-matt",
+      "implicit": false,
+      "source_sha256": "1371f5ce005de0992a44b137748bfb960a56948aa9871b405fe9d90b24332e3c"
+    },
+    {
+      "source": "skills/engineering/code-review/SKILL.md",
+      "source_name": "code-review",
+      "name": "code-review",
+      "category": "engineering",
+      "path": "skills/code-review",
+      "implicit": true,
+      "source_sha256": "09eb147f793e4647949edd32dbad278f0554dfb56e0d46b699cd4c2c55bf0357"
+    },
+    {
+      "source": "skills/engineering/codebase-design/SKILL.md",
+      "source_name": "codebase-design",
+      "name": "codebase-design",
+      "category": "engineering",
+      "path": "skills/codebase-design",
+      "implicit": true,
+      "source_sha256": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2"
+    },
+    {
+      "source": "skills/engineering/diagnosing-bugs/SKILL.md",
+      "source_name": "diagnosing-bugs",
+      "name": "diagnosing-bugs",
+      "category": "engineering",
+      "path": "skills/diagnosing-bugs",
+      "implicit": true,
+      "source_sha256": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d"
+    },
+    {
+      "source": "skills/engineering/domain-modeling/SKILL.md",
+      "source_name": "domain-modeling",
+      "name": "domain-modeling",
+      "category": "engineering",
+      "path": "skills/domain-modeling",
+      "implicit": true,
+      "source_sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3"
+    },
+    {
+      "source": "skills/engineering/grill-with-docs/SKILL.md",
+      "source_name": "grill-with-docs",
+      "name": "grill-with-docs",
+      "category": "engineering",
+      "path": "skills/grill-with-docs",
+      "implicit": false,
+      "source_sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe"
+    },
+    {
+      "source": "skills/engineering/implement/SKILL.md",
+      "source_name": "implement",
+      "name": "implement",
+      "category": "engineering",
+      "path": "skills/implement",
+      "implicit": false,
+      "source_sha256": "483bdc4ccf4ac31d86ac7beeaa0d0db80313e71e120bb8c59b3196ae5decd53d"
+    },
+    {
+      "source": "skills/engineering/implement-spec/SKILL.md",
+      "source_name": "implement-spec",
+      "name": "implement-spec",
+      "category": "engineering",
+      "path": "skills/implement-spec",
+      "implicit": false,
+      "source_sha256": "7a22dd2e60b8fcece478ced9d2533582adf3520d695acd3ab715341535c9e56d"
+    },
+    {
+      "source": "skills/engineering/improve-codebase-architecture/SKILL.md",
+      "source_name": "improve-codebase-architecture",
+      "name": "improve-codebase-architecture",
+      "category": "engineering",
+      "path": "skills/improve-codebase-architecture",
+      "implicit": false,
+      "source_sha256": "552240a5ab5cec6b67c15dd1ad6e9f6962b1bca6ce870059a8c2713760c20392"
+    },
+    {
+      "source": "skills/engineering/pr/SKILL.md",
+      "source_name": "pr",
+      "name": "pr",
+      "category": "engineering",
+      "path": "skills/pr",
+      "implicit": true,
+      "source_sha256": "ab63f1cf78647389edcd386c9427c5dfca27ed2836930c24773ffee834c19bcd"
+    },
+    {
+      "source": "skills/engineering/prototype/SKILL.md",
+      "source_name": "prototype",
+      "name": "prototype",
+      "category": "engineering",
+      "path": "skills/prototype",
+      "implicit": true,
+      "source_sha256": "714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3"
+    },
+    {
+      "source": "skills/engineering/research/SKILL.md",
+      "source_name": "research",
+      "name": "research",
+      "category": "engineering",
+      "path": "skills/research",
+      "implicit": true,
+      "source_sha256": "985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4"
+    },
+    {
+      "source": "skills/engineering/retro/SKILL.md",
+      "source_name": "retro",
+      "name": "retro",
+      "category": "engineering",
+      "path": "skills/retro",
+      "implicit": false,
+      "source_sha256": "33fbc28568e3146f20fd908b12998bc0ab30aa4f4c87288199a40793efa94696"
+    },
+    {
+      "source": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+      "source_name": "setup-matt-pocock-skills",
+      "name": "setup-matt-pocock-skills",
+      "category": "engineering",
+      "path": "skills/setup-matt-pocock-skills",
+      "implicit": false,
+      "source_sha256": "f148858ffb7f63c03c06fca06e6fdb1d91a35c6b293244b8fdfacd5f4cc028c4"
+    },
+    {
+      "source": "skills/engineering/tdd/SKILL.md",
+      "source_name": "tdd",
+      "name": "tdd",
+      "category": "engineering",
+      "path": "skills/tdd",
+      "implicit": true,
+      "source_sha256": "5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0"
+    },
+    {
+      "source": "skills/engineering/to-spec/SKILL.md",
+      "source_name": "to-spec",
+      "name": "to-spec",
+      "category": "engineering",
+      "path": "skills/to-spec",
+      "implicit": false,
+      "source_sha256": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088"
+    },
+    {
+      "source": "skills/engineering/to-tickets/SKILL.md",
+      "source_name": "to-tickets",
+      "name": "to-tickets",
+      "category": "engineering",
+      "path": "skills/to-tickets",
+      "implicit": false,
+      "source_sha256": "56ec23c5b2782785d4e65bff9e315b6d3aeb4ef977c174a219e99489fada1995"
+    },
+    {
+      "source": "skills/engineering/triage/SKILL.md",
+      "source_name": "triage",
+      "name": "triage",
+      "category": "engineering",
+      "path": "skills/triage",
+      "implicit": false,
+      "source_sha256": "917b0baf74be583e74f110857ed45df2766617f75c00baf61fd136d7af515edf"
+    },
+    {
+      "source": "skills/engineering/wayfinder/SKILL.md",
+      "source_name": "wayfinder",
+      "name": "wayfinder",
+      "category": "engineering",
+      "path": "skills/wayfinder",
+      "implicit": false,
+      "source_sha256": "9be7b478c389605a24517d27752f278933588da97a1b5921b165f455edf4c5b7"
+    },
+    {
+      "source": "skills/engineering/wizard/SKILL.md",
+      "source_name": "wizard",
+      "name": "wizard",
+      "category": "engineering",
+      "path": "skills/wizard",
+      "implicit": true,
+      "source_sha256": "bdf31d48211ea559878f95a4f344aeabf8d85897488ba564382bab0b000daac1"
+    },
+    {
+      "source": "skills/in-progress/chief-of-staff/SKILL.md",
+      "source_name": "chief-of-staff",
+      "name": "chief-of-staff",
+      "category": "in-progress",
+      "path": "skills/chief-of-staff",
+      "implicit": false,
+      "source_sha256": "6cc6e47ab5022f3e45e5be0fedbb0f6e645f4f0190d6b0c51c7cd60c2d7c1d98"
+    },
+    {
+      "source": "skills/in-progress/claude-handoff/SKILL.md",
+      "source_name": "claude-handoff",
+      "name": "background-handoff",
+      "category": "in-progress",
+      "path": "skills/background-handoff",
+      "implicit": false,
+      "source_sha256": "79357a18425d66d4c24048bedf83dceb79d3bba356f38014950f764a7fab4026"
+    },
+    {
+      "source": "skills/in-progress/loop-me/SKILL.md",
+      "source_name": "loop-me",
+      "name": "loop-me",
+      "category": "in-progress",
+      "path": "skills/loop-me",
+      "implicit": false,
+      "source_sha256": "e44d1cc3e760fb86ac42964c2a5f1fcac511715db50fb375f3f7be814de1eaa7"
+    },
+    {
+      "source": "skills/in-progress/setup-ts-deep-modules/SKILL.md",
+      "source_name": "setup-ts-deep-modules",
+      "name": "setup-ts-deep-modules",
+      "category": "in-progress",
+      "path": "skills/setup-ts-deep-modules",
+      "implicit": false,
+      "source_sha256": "29acca66ac99d4532e2a6f0370d8125d7cba1e87c9ac66573203c75189d3e6c7"
+    },
+    {
+      "source": "skills/in-progress/writing-beats/SKILL.md",
+      "source_name": "writing-beats",
+      "name": "writing-beats",
+      "category": "in-progress",
+      "path": "skills/writing-beats",
+      "implicit": false,
+      "source_sha256": "a96abafa2372eede8267d770138b322d6125da8adaa7ccf0a5e08e4ee13ee71e"
+    },
+    {
+      "source": "skills/in-progress/writing-fragments/SKILL.md",
+      "source_name": "writing-fragments",
+      "name": "writing-fragments",
+      "category": "in-progress",
+      "path": "skills/writing-fragments",
+      "implicit": false,
+      "source_sha256": "298b0edd23df229183630de592ed8aa4289233560f2040691f6eb77caeaad4ea"
+    },
+    {
+      "source": "skills/in-progress/writing-shape/SKILL.md",
+      "source_name": "writing-shape",
+      "name": "writing-shape",
+      "category": "in-progress",
+      "path": "skills/writing-shape",
+      "implicit": false,
+      "source_sha256": "f5e6c57bdd85178ace4a260c92f46da6b64ddee18215b461d875739c68976f72"
+    },
+    {
+      "source": "skills/misc/git-guardrails-claude-code/SKILL.md",
+      "source_name": "git-guardrails-claude-code",
+      "name": "git-guardrails",
+      "category": "misc",
+      "path": "skills/git-guardrails",
+      "implicit": true,
+      "source_sha256": "69b291d655626a01602b998a1836fcb93c058ede68dfafddfd71e87f17074764"
+    },
+    {
+      "source": "skills/misc/migrate-to-shoehorn/SKILL.md",
+      "source_name": "migrate-to-shoehorn",
+      "name": "migrate-to-shoehorn",
+      "category": "misc",
+      "path": "skills/migrate-to-shoehorn",
+      "implicit": true,
+      "source_sha256": "de4da4c11d924fac79c924b2ee3d2db4a5cb98386eb490a599119463d036ae72"
+    },
+    {
+      "source": "skills/misc/scaffold-exercises/SKILL.md",
+      "source_name": "scaffold-exercises",
+      "name": "scaffold-exercises",
+      "category": "misc",
+      "path": "skills/scaffold-exercises",
+      "implicit": true,
+      "source_sha256": "75f5c9d771606fb9762f16522efc954df11c324f87148d8ff069bce166257de9"
+    },
+    {
+      "source": "skills/misc/setup-pre-commit/SKILL.md",
+      "source_name": "setup-pre-commit",
+      "name": "setup-pre-commit",
+      "category": "misc",
+      "path": "skills/setup-pre-commit",
+      "implicit": true,
+      "source_sha256": "c9819d7f1e3b198064edc1faa3154224ed67395e9f07f5d3cea4b67cf0a11a98"
+    },
+    {
+      "source": "skills/productivity/grill-me/SKILL.md",
+      "source_name": "grill-me",
+      "name": "grill-me",
+      "category": "productivity",
+      "path": "skills/grill-me",
+      "implicit": false,
+      "source_sha256": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637"
+    },
+    {
+      "source": "skills/productivity/grilling/SKILL.md",
+      "source_name": "grilling",
+      "name": "grilling",
+      "category": "productivity",
+      "path": "skills/grilling",
+      "implicit": true,
+      "source_sha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15"
+    },
+    {
+      "source": "skills/productivity/handoff/SKILL.md",
+      "source_name": "handoff",
+      "name": "handoff",
+      "category": "productivity",
+      "path": "skills/handoff",
+      "implicit": false,
+      "source_sha256": "4cbb043950dad2ffd3662ff1a5a0b51ae676004b5cae10e3787e8ee7a4ee69d3"
+    },
+    {
+      "source": "skills/productivity/teach/SKILL.md",
+      "source_name": "teach",
+      "name": "teach",
+      "category": "productivity",
+      "path": "skills/teach",
+      "implicit": false,
+      "source_sha256": "550482c2d674b085c9043b87bfdc14a8f2ec453c736119e7fcbb1e9332bffeba"
+    },
+    {
+      "source": "skills/productivity/to-questionnaire/SKILL.md",
+      "source_name": "to-questionnaire",
+      "name": "to-questionnaire",
+      "category": "productivity",
+      "path": "skills/to-questionnaire",
+      "implicit": false,
+      "source_sha256": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b"
+    },
+    {
+      "source": "skills/productivity/wait-what/SKILL.md",
+      "source_name": "wait-what",
+      "name": "wait-what",
+      "category": "productivity",
+      "path": "skills/wait-what",
+      "implicit": false,
+      "source_sha256": "d961bb37defd975c539427edb8f450cdbccdcdd552e213c1ece46676a7970905"
+    },
+    {
+      "source": "skills/productivity/writing-for-agents/SKILL.md",
+      "source_name": "writing-for-agents",
+      "name": "writing-for-agents",
+      "category": "productivity",
+      "path": "skills/writing-for-agents",
+      "implicit": true,
+      "source_sha256": "551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a"
+    }
+  ]
+}

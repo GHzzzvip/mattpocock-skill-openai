@@ -1,0 +1,5 @@
+interface:
+  display_name: "Handoff"
+  short_description: "Write a portable handoff artifact so another session, agent,..."
+policy:
+  allow_implicit_invocation: false

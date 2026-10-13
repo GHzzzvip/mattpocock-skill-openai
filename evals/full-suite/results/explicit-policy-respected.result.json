@@ -1,0 +1,26 @@
+{
+  "id": "explicit-policy-respected",
+  "loaded_skills": [],
+  "discovery_decision": "Catalog metadata: implement is explicit-only and was not invoked by name; specified narrow parser edit can use existing tests directly. No diagnosis, architecture, or new test-first workflow is needed.",
+  "actions": [
+    {
+      "command": "cat /var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/explicit-policy-respected.request.json",
+      "output": "Read per-case prompt, context, workspace and restrictions."
+    },
+    {
+      "command": "rg --files; git status --short; cat parser.py test_parser.py; python3 -m unittest",
+      "output": "user-notes.txt\nparser.py\ntest_parser.py\n M user-notes.txt\ndef parse_items(text):\n    return text.split(',')\nimport unittest\nfrom parser import parse_items\nclass Tests(unittest.TestCase):\n    def test_empty(self): self.assertEqual(parse_items(''), [])\n    def test_two(self): self.assertEqual(parse_items('a,b'), ['a','b'])\nif __name__ == '__main__': unittest.main()\nF.\n======================================================================\nFAIL: test_empty (test_parser.Tests)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/explicit-policy-respected/test_parser.py\", line 4, in test_empty\n    def test_empty(self): self.assertEqual(parse_items(''), [])\nAssertionError: Lists differ: [''] != []\n\nFirst list contains 1 additional elements.\nFirst extra element 0:\n''\n\n- ['']\n+ []\n\n----------------------------------------------------------------------\nRan 2 tests in 0.001s\n\nFAILED (failures=1)\n",
+      "exit_code": 1
+    },
+    {
+      "command": "python3 - <<'PY'\nfrom pathlib import Path\np=Path('parser.py')\np.write_text(p.read_text().replace(\"return text.split(',')\", \"return [] if text == '' else text.split(',')\"))\nPY\npython3 -m unittest\ngit diff --check\ngit diff --stat\ngit diff -- parser.py",
+      "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n parser.py      | 2 +-\n user-notes.txt | 2 +-\n 2 files changed, 2 insertions(+), 2 deletions(-)\ndiff --git a/parser.py b/parser.py\nindex b932420..c73e4d6 100644\n--- a/parser.py\n+++ b/parser.py\n@@ -1,2 +1,2 @@\n def parse_items(text):\n-    return text.split(',')\n+    return [] if text == '' else text.split(',')\n",
+      "exit_code": 0
+    }
+  ],
+  "artifacts": [
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/explicit-policy-respected/parser.py"
+  ],
+  "limitations": [],
+  "final_response": "Fixed empty input to return []; comma-separated parsing is unchanged. Both existing unittest cases pass. Preserved your change to user-notes.txt."
+}

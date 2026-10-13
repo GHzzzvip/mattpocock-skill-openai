@@ -1,0 +1,21 @@
+{
+  "id": "router-no-activation",
+  "loaded_skills": [
+    "ask-matt/SKILL.md",
+    "grill-with-docs/SKILL.md (read for recommendation only)",
+    "grill-me/SKILL.md (read for comparison only)"
+  ],
+  "actions": [
+    {
+      "command": "Read ask-matt/SKILL.md and catalog.json",
+      "output": "Unclear feature maps to clarification; relevant candidates are explicit-only."
+    },
+    {
+      "command": "Read candidate entrypoints grill-with-docs/SKILL.md and grill-me/SKILL.md",
+      "output": "Confirmed documented versus conversational clarification behavior; neither workflow activated."
+    }
+  ],
+  "final_response": "I recommend $grill-with-docs for this billing idea. Billing units and invoice timing define the feature\u2019s behavior and still need clarification. The skill uses concrete scenarios to resolve those choices, records settled terms in a glossary, and writes an ADR when a significant tradeoff warrants one. Its outcome is an agreed plan plus unresolved questions and relevant document paths. If you prefer to explore without saved documents, use $grill-me instead. This is a recommendation only; I have not started either workflow or changed the workspace.",
+  "artifacts": [],
+  "limitations": []
+}

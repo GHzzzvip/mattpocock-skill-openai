@@ -1,0 +1,47 @@
+{
+  "rule-push": {
+    "matchedRules": [
+      {
+        "prefixRuleMatch": {
+          "matchedPrefix": [
+            "git",
+            "push"
+          ],
+          "decision": "forbidden",
+          "justification": "Direct pushes are disabled by the selected workflow."
+        }
+      }
+    ],
+    "decision": "forbidden"
+  },
+  "rule-force": {
+    "matchedRules": [
+      {
+        "prefixRuleMatch": {
+          "matchedPrefix": [
+            "git",
+            "push"
+          ],
+          "decision": "forbidden",
+          "justification": "Direct pushes are disabled by the selected workflow."
+        }
+      }
+    ],
+    "decision": "forbidden"
+  },
+  "rule-status": {
+    "matchedRules": []
+  },
+  "rule-prefix-gap": {
+    "matchedRules": []
+  },
+  "wizard-basic-upsert": {
+    "passed": true,
+    "mode": "0600",
+    "scope": "dummy single-line values only; no browser or external secret writes"
+  },
+  "manual-loop-fixture": {
+    "passed": true,
+    "scope": "simulated input; no real app interaction"
+  }
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Writing Fragments"
+  short_description: "Collect raw writing material through conversation, appending..."
+policy:
+  allow_implicit_invocation: false

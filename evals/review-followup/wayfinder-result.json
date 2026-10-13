@@ -1,0 +1,159 @@
+{
+  "skill": "/Users/ghz/workspace/ai-practice/skill-openai/skills/wayfinder/SKILL.md",
+  "reference": "/Users/ghz/workspace/ai-practice/skill-openai/skills/wayfinder/references/map-format.md",
+  "original_fixture": "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skill-review-eval-x3p105pa/wayfinder.json",
+  "run_id": "wayfinder-eval-e98e7587-806f-498e-b5b4-c6f433c6f285",
+  "scenarios": [
+    {
+      "scenario": 1,
+      "request": "Continue this decision map; select the next available decision. Another session is working in this workspace. You may update this local fixture to record your own claim, but do not invent user preferences.",
+      "fixture_path": "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skill-review-eval-x3p105pa/wayfinder-scenario-1.json",
+      "actual_actions": [
+        {
+          "action": "copy_original_fixture",
+          "path": "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skill-review-eval-x3p105pa/wayfinder-scenario-1.json"
+        },
+        {
+          "action": "inspect_ready_frontier",
+          "ready": [
+            "B"
+          ],
+          "excluded": {
+            "A": "active and owned by other-run",
+            "C": "blocked by unresolved A"
+          }
+        },
+        {
+          "action": "acquire_exclusive_claim_marker",
+          "mechanism": "os.open(O_CREAT | O_EXCL)",
+          "path": "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skill-review-eval-x3p105pa/wayfinder-scenario-1.B.claim",
+          "result": "acquired",
+          "scope": "scenario copy; participating claimants must honor marker"
+        },
+        {
+          "action": "reread_status_dependencies_owner_after_exclusive_claim",
+          "verified": true
+        },
+        {
+          "action": "record_and_verify_own_claim",
+          "ticket": "B",
+          "fixture_state": {
+            "destination": "Decide a cache policy",
+            "tasks": {
+              "A": {
+                "question": "Choose eviction policy",
+                "status": "active",
+                "owner": "other-run",
+                "blockers": []
+              },
+              "B": {
+                "question": "Choose default TTL; user has not given preference",
+                "status": "active",
+                "owner": "wayfinder-eval-e98e7587-806f-498e-b5b4-c6f433c6f285",
+                "blockers": [],
+                "claimed_at": "2026-10-12T15:08:21.107221+00:00"
+              },
+              "C": {
+                "question": "Choose monitoring signals",
+                "status": "open",
+                "owner": null,
+                "blockers": [
+                  "A"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "action": "persist_blocked_state_and_release_only_own_claim",
+          "ticket": "B",
+          "verified": true,
+          "claim_marker_removed": true
+        }
+      ],
+      "resulting_fixture_state": {
+        "destination": "Decide a cache policy",
+        "tasks": {
+          "A": {
+            "question": "Choose eviction policy",
+            "status": "active",
+            "owner": "other-run",
+            "blockers": []
+          },
+          "B": {
+            "question": "Choose default TTL; user has not given preference",
+            "status": "blocked",
+            "owner": null,
+            "blockers": [],
+            "claimed_at": "2026-10-12T15:08:21.107221+00:00",
+            "waiting_for": "user_input",
+            "note": "Default TTL remains unresolved: user preference and acceptable cache staleness have not been supplied. Released this run's claim on blocked exit.",
+            "released_at": "2026-10-12T15:08:21.107686+00:00"
+          },
+          "C": {
+            "question": "Choose monitoring signals",
+            "status": "open",
+            "owner": null,
+            "blockers": [
+              "A"
+            ]
+          }
+        }
+      },
+      "user_facing_response": "Selected B: choose the default TTL. I recorded and verified my claim, then marked it blocked on user input and released my ownership because the acceptable cache staleness is unknown. A remains owned by other-run, and C is waiting on A. No decisions were settled, no ready tickets remain, and the map is not ready for a specification. To resume B, please specify how stale cached data may be."
+    },
+    {
+      "scenario": 2,
+      "request": "Work on decision A in the map.",
+      "fixture_path": "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skill-review-eval-x3p105pa/wayfinder-scenario-2.json",
+      "actual_actions": [
+        {
+          "action": "copy_original_fixture",
+          "path": "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skill-review-eval-x3p105pa/wayfinder-scenario-2.json"
+        },
+        {
+          "action": "reread_selected_ticket_status_blockers_owner",
+          "ticket": "A",
+          "observed": {
+            "question": "Choose eviction policy",
+            "status": "active",
+            "owner": "other-run",
+            "blockers": []
+          }
+        },
+        {
+          "action": "report_ownership_conflict_without_claiming_or_mutating",
+          "reason": "Explicit selection does not override another run's claim."
+        }
+      ],
+      "resulting_fixture_state": {
+        "destination": "Decide a cache policy",
+        "tasks": {
+          "A": {
+            "question": "Choose eviction policy",
+            "status": "active",
+            "owner": "other-run",
+            "blockers": []
+          },
+          "B": {
+            "question": "Choose default TTL; user has not given preference",
+            "status": "open",
+            "owner": null,
+            "blockers": []
+          },
+          "C": {
+            "question": "Choose monitoring signals",
+            "status": "open",
+            "owner": null,
+            "blockers": [
+              "A"
+            ]
+          }
+        }
+      },
+      "fixture_unchanged_from_original": true,
+      "user_facing_response": "A (choose eviction policy) is active and owned by other-run, so I did not start duplicate work or alter its claim. Work on A requires the current worker to finish or an authorized handoff with evidence that it has stopped. No decisions were settled; B is the remaining ready ticket, C is blocked by A, and the map is not ready for a specification."
+    }
+  ],
+  "original_fixture_unchanged": true
+}

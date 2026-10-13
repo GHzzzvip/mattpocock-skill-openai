@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-12",
+  "method": "Two independent subagents with no parent history; each ran two scenarios using only skill instructions and raw fixtures. Parent compared observed outputs with expected criteria afterward.",
+  "results": [
+    {
+      "case": "wayfinder-owned-frontier",
+      "result": "pass",
+      "evidence": "wayfinder-result.json",
+      "observed": "Selected B, acquired exclusive local claim, verified ownership, recorded missing input and released own claim; A unchanged."
+    },
+    {
+      "case": "wayfinder-selected-conflict",
+      "result": "pass",
+      "evidence": "wayfinder-result.json",
+      "observed": "Reported conflict on explicitly selected A without taking over or mutating fixture."
+    },
+    {
+      "case": "triage-reply-queue",
+      "result": "pass",
+      "evidence": "triage-result.json",
+      "observed": "Returned three buckets containing 1, 2, 3; excluded bot-only, stale reply, and disabled external PR discovery."
+    },
+    {
+      "case": "triage-reply-recheck",
+      "result": "pass",
+      "evidence": "triage-result.json",
+      "observed": "Reused supplied steps, identified missing version, recommended needs-info after re-evaluation, no mutations."
+    }
+  ],
+  "limitations": [
+    "One run per scenario, not a model/host reliability benchmark.",
+    "No simultaneous claim race or live tracker integration was exercised.",
+    "Queue fixture has one included item per bucket; oldest-first ordering of multiple items was not behaviorally tested.",
+    "Original 24 behavior cases remain unexecuted.",
+    "Raw results retain original temporary execution paths; fixture and result copies are preserved beside this summary."
+  ],
+  "skill_sha256": {
+    "skills/wayfinder/LICENSE": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+    "skills/wayfinder/SKILL.md": "34f662fa0470dd2ef64f859fe4b2941ab16f1f436266e619c9a7a564b28acf28",
+    "skills/wayfinder/references/map-format.md": "b36d853ca014c26900a23ad6e683211bb7d97656b39173890bfdb40f9d9d7c25",
+    "skills/wayfinder/agents/openai.yaml": "3e104ee0ac801d258aa427f4fcec3aad1cbc5cf6ac1fbe88ebbdc92683042dcc",
+    "skills/triage/LICENSE": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+    "skills/triage/SKILL.md": "5351d5ba17ce12537bb7b827b00d82845e05e286c33d6320db6720897f61018d",
+    "skills/triage/references/state-machine.md": "2e1a48355d91bb7187efa4aebed25dccfa0768865f5802193819a6f4542ad0aa",
+    "skills/triage/agents/openai.yaml": "61685084260b7c8a14042cdfd676aaa8f6f5f0ddbaa337130de38130bca7c8bd"
+  }
+}

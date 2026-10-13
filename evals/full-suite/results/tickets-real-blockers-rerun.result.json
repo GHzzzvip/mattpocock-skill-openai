@@ -1,0 +1,43 @@
+{
+  "id": "tickets-real-blockers",
+  "loaded_skills": [
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/skill-library/to-tickets/SKILL.md"
+  ],
+  "loaded_references": [
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/skill-library/to-tickets/references/ticket-template.md"
+  ],
+  "inputs_read": [
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/tickets-real-blockers-rerun/plan.md",
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/tickets-real-blockers-rerun/schema.sql",
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/tickets-real-blockers-rerun/profile.py"
+  ],
+  "actions": [
+    "Read request, named skill and task template.",
+    "Inspected raw plan and implementation fixtures.",
+    "Chose three tasks: shared migration prerequisite plus two independent feature slices.",
+    "Wrote one local Markdown file per task with source link, status, blockers, scope, acceptance criteria and verification.",
+    "Checked that every local Markdown link resolves and the dependency graph is acyclic."
+  ],
+  "artifact_paths": [
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/tickets-real-blockers-rerun/.scratch/profile/issues/01-profile-schema-migration.md",
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/tickets-real-blockers-rerun/.scratch/profile/issues/02-avatar-upload.md",
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/tickets-real-blockers-rerun/.scratch/profile/issues/03-email-notification-preference.md"
+  ],
+  "dependency_graph": {
+    "01": [],
+    "02": [
+      "01"
+    ],
+    "03": [
+      "01"
+    ]
+  },
+  "ready_frontier": [
+    "01"
+  ],
+  "final_response": "Created three local tasks in [profile issues](/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/tickets-real-blockers-rerun/.scratch/profile/issues), based on [plan.md](/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/tickets-real-blockers-rerun/plan.md).\n\n- **01: Schema migration** \u2014 ready to start.\n- **02: Avatar upload** \u2014 blocked only by 01.\n- **03: Email notification preference** \u2014 blocked only by 01.\n\nTasks 02 and 03 can proceed independently after the migration. Each task includes acceptance checks and verification steps. All links resolve and the dependency graph is acyclic.",
+  "limitations": [
+    "Tasks are local drafts; implementation and deployment were not requested and were not performed.",
+    "Migration deployment must be verified before either feature rollout; no external services were contacted."
+  ]
+}

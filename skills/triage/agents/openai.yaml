@@ -1,0 +1,5 @@
+interface:
+  display_name: "Triage"
+  short_description: "Evaluate incoming issues or explicitly selected pull..."
+policy:
+  allow_implicit_invocation: false

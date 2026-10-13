@@ -1,0 +1,5 @@
+interface:
+  display_name: "Background Handoff"
+  short_description: "Transfer a bounded continuation task to a supported..."
+policy:
+  allow_implicit_invocation: false

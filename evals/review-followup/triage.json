@@ -1,0 +1,99 @@
+{
+  "external_pr_discovery": false,
+  "items": [
+    {
+      "id": 1,
+      "title": "No state",
+      "created": "2026-10-01",
+      "labels": [
+        "docs"
+      ],
+      "comments": []
+    },
+    {
+      "id": 2,
+      "title": "Needs evaluation",
+      "created": "2026-10-02",
+      "labels": [
+        "bug",
+        "needs-triage"
+      ],
+      "comments": []
+    },
+    {
+      "id": 3,
+      "title": "New reporter details",
+      "created": "2026-10-03",
+      "labels": [
+        "bug",
+        "needs-info"
+      ],
+      "reporter": "alice",
+      "comments": [
+        {
+          "author": "maintainer",
+          "date": "2026-10-10",
+          "body": "Triage: Please provide reproduction steps and environment version."
+        },
+        {
+          "author": "alice",
+          "date": "2026-10-11",
+          "body": "Repro: click Save twice. I have not checked the environment version."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Bot activity only",
+      "created": "2026-10-04",
+      "labels": [
+        "needs-info"
+      ],
+      "reporter": "bob",
+      "comments": [
+        {
+          "author": "maintainer",
+          "date": "2026-10-10",
+          "body": "Triage: Need repro."
+        },
+        {
+          "author": "bot",
+          "date": "2026-10-11",
+          "body": "Still waiting"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Old reporter reply",
+      "created": "2026-10-05",
+      "labels": [
+        "needs-info"
+      ],
+      "reporter": "carol",
+      "comments": [
+        {
+          "author": "carol",
+          "date": "2026-10-09",
+          "body": "Some details"
+        },
+        {
+          "author": "maintainer",
+          "date": "2026-10-10",
+          "body": "Triage: Need version."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "External PR",
+      "created": "2026-10-01",
+      "kind": "PR",
+      "external": true,
+      "labels": [
+        "needs-triage"
+      ],
+      "comments": []
+    }
+  ]
+}

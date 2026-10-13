@@ -1,0 +1,5 @@
+interface:
+  display_name: "Loop Me"
+  short_description: "Design a recurring personal or team workflow as an..."
+policy:
+  allow_implicit_invocation: false

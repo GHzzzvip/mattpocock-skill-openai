@@ -1,0 +1,26 @@
+{
+  "id": "normal-test-no-shoehorn",
+  "loaded_skills": [],
+  "discovery_decision": "Catalog metadata: timeout configuration edit needs no fixture migration or test-first implementation; no skill selected.",
+  "actions": [
+    {
+      "command": "cat /var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/normal-test-no-shoehorn.request.json",
+      "output": "Read per-case prompt, context, workspace and restrictions."
+    },
+    {
+      "command": "rg --files; git status --short; cat test.config.json",
+      "output": "test.config.json\n{\"timeout\": 2000}\n",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 - <<'PY'\nfrom pathlib import Path\nimport json\np=Path('test.config.json')\ns=p.read_text()\nassert json.loads(s)['timeout']==2000\np.write_text(s.replace('2000','10000'))\nassert json.loads(p.read_text())['timeout']==10000\nprint('Timeout verified: 10000 ms')\nPY\ngit diff --check\ngit diff -- test.config.json",
+      "output": "Timeout verified: 10000 ms\ndiff --git a/test.config.json b/test.config.json\nindex 6fecd54..438edaa 100644\n--- a/test.config.json\n+++ b/test.config.json\n@@ -1 +1 @@\n-{\"timeout\": 2000}\n+{\"timeout\": 10000}\n",
+      "exit_code": 0
+    }
+  ],
+  "artifacts": [
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/normal-test-no-shoehorn/test.config.json"
+  ],
+  "limitations": [],
+  "final_response": "Set the test timeout to 10,000 milliseconds (10 seconds) and verified the JSON value."
+}

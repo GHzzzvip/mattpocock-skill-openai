@@ -1,0 +1,5 @@
+interface:
+  display_name: "Writing Beats"
+  short_description: "Develop an article as a sequence of narrative beats,..."
+policy:
+  allow_implicit_invocation: false

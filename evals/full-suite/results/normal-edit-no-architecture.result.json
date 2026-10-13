@@ -1,0 +1,24 @@
+{
+  "id": "normal-edit-no-architecture",
+  "loaded_skills": [],
+  "discovery_decision": "Catalog metadata: a README spelling correction is not architecture work or an invoked explicit workflow; select no skills.",
+  "actions": [
+    {
+      "command": "cat /var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/normal-edit-no-architecture.request.json",
+      "output": "Read per-case prompt, context, workspace and restrictions."
+    },
+    {
+      "command": "rg --files -g 'AGENTS.md' -g 'README*'; git status --short; cat README.md",
+      "output": "README.md\n# Demo\nThis is a smple example.\n"
+    },
+    {
+      "command": "python3 - <<'PY'\nfrom pathlib import Path\np=Path('README.md')\np.write_text(p.read_text().replace('smple','simple'))\nPY\n git diff --check\n git diff -- README.md",
+      "output": "diff --git a/README.md b/README.md\nindex 85ee4bb..8a03883 100644\n--- a/README.md\n+++ b/README.md\n@@ -1,2 +1,2 @@\n # Demo\n-This is a smple example.\n+This is a simple example.\n"
+    }
+  ],
+  "artifacts": [
+    "/var/folders/7d/9vgyg_q96wxb119yqxsyj52h0000gn/T/skills-behavior-24-mdygeigz/normal-edit-no-architecture/README.md"
+  ],
+  "limitations": [],
+  "final_response": "Corrected \u201csmple\u201d to \u201csimple\u201d in README.md. The diff has no whitespace errors."
+}

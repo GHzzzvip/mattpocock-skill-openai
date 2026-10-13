@@ -1,0 +1,29 @@
+{
+  "destination": "Decide a cache policy",
+  "tasks": {
+    "A": {
+      "question": "Choose eviction policy",
+      "status": "active",
+      "owner": "other-run",
+      "blockers": []
+    },
+    "B": {
+      "question": "Choose default TTL; user has not given preference",
+      "status": "blocked",
+      "owner": null,
+      "blockers": [],
+      "claimed_at": "2026-10-12T15:08:21.107221+00:00",
+      "waiting_for": "user_input",
+      "note": "Default TTL remains unresolved: user preference and acceptable cache staleness have not been supplied. Released this run's claim on blocked exit.",
+      "released_at": "2026-10-12T15:08:21.107686+00:00"
+    },
+    "C": {
+      "question": "Choose monitoring signals",
+      "status": "open",
+      "owner": null,
+      "blockers": [
+        "A"
+      ]
+    }
+  }
+}

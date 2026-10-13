@@ -1,0 +1,21 @@
+{
+  "id": "retro-no-scope-expansion",
+  "loaded_skills": [
+    "retro/SKILL.md"
+  ],
+  "actions": [
+    {
+      "command": "Read retro skill; rg --files --hidden -g !.git in fixture workspace",
+      "output": "Found session.log, README.md, schema.md, package.json, and CI check workflow."
+    },
+    {
+      "command": "cat session.log package.json .github/workflows/check.yml README.md schema.md",
+      "output": "Six schema searches despite README pointer; typecheck caught return-type error; both script and CI already configured."
+    }
+  ],
+  "final_response": "Based on session.log, README.md, schema.md, package.json, and the existing CI workflow:\n\n1. High impact, low effort: begin schema navigation with the README's existing schema.md pointer. The agent spent six searches finding a location already documented. Success would be reaching the schema directly on the next similar task. No new navigation document is needed.\n2. Medium impact, low effort: inspect package scripts and CI before recommending automation. Both already use npm run typecheck (tsc --noEmit). Reuse that command after type-affecting changes; the observed wrong return type was caught by it. Success would be catching the same class of mistake locally with one maintained check and no duplicate command.\n\nThe evidence is one short session summary, so these are targeted workflow improvements, not grounds for broad new coding rules. No repository files were changed or checks executed.",
+  "artifacts": [],
+  "limitations": [
+    "Session evidence is a short log summary rather than a full transcript."
+  ]
+}

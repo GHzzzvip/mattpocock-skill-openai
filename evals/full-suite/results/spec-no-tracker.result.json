@@ -1,0 +1,25 @@
+{
+  "id": "spec-no-tracker",
+  "loaded_skills": [
+    "to-spec/SKILL.md",
+    "to-spec/references/spec-template.md"
+  ],
+  "actions": [
+    {
+      "command": "cat request, skill, plan.md; ls workspace; cat spec-template.md",
+      "output": "Only plan and Git metadata present; no project template or tracker configured."
+    },
+    {
+      "command": "Write .scratch/note-archive/spec.md",
+      "output": "Local draft includes agreed contract, acceptance checks, NoteService verification, exclusions and unresolved quota policy."
+    }
+  ],
+  "final_response": "Created .scratch/note-archive/spec.md. Quota policy remains open; proposed implementation details are marked separately from agreed behavior. No tracker is needed to review this draft.",
+  "artifacts": [
+    ".scratch/note-archive/spec.md"
+  ],
+  "limitations": [
+    "Only a plan was supplied; code and tests could not be inspected or executed.",
+    "Quota treatment remains undecided."
+  ]
+}

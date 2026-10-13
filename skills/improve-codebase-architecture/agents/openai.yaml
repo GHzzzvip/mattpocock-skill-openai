@@ -1,0 +1,5 @@
+interface:
+  display_name: "Improve Codebase Architecture"
+  short_description: "Survey an area of a codebase for concrete architectural..."
+policy:
+  allow_implicit_invocation: false
